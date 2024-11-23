@@ -8,8 +8,8 @@ import { useLocation, useParams } from 'react-router-dom'
 
 export default function AddNoteForm() {
 
-    const params = useParams()
-    const location = useLocation()
+    const params = useParams() // para obtener el projectId
+    const location = useLocation() // para obtener taskId
 
     const queryParams = new URLSearchParams(location.search)
 
