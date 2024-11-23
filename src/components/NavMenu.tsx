@@ -9,12 +9,12 @@ type NavMenuProps = {
   name: User['name']
 }
 
-export default function NavMenu({name} : NavMenuProps) {
+export default function NavMenu({ name }: NavMenuProps) {
 
   const queryClient = useQueryClient()
   const logout = () => {
     localStorage.removeItem('AUTH_TOKEN')
-    queryClient.removeQueries({queryKey: ['user']})
+    queryClient.removeQueries({ queryKey: ['user'] })
   }
 
   return (
